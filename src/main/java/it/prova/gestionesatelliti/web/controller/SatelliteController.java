@@ -96,9 +96,10 @@ public class SatelliteController {
 		return "satellite/update";
 	}
 
+	
 	@PostMapping("/update")
-	public String saveupdate(@Valid @ModelAttribute("update_satellite_attr") Satellite satellite,
-			 Model model, RedirectAttributes redirectAttrs, BindingResult result) {
+	public String saveupdate(@Valid @ModelAttribute("update_satellite_attr") Satellite satellite,BindingResult result, 
+			RedirectAttributes redirectAttrs) {
 
 		if (result.hasErrors())
 			return "satellite/update";

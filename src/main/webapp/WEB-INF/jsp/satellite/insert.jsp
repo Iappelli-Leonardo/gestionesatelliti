@@ -7,13 +7,14 @@
 	 
 	 	<!-- Common imports in pages -->
 	 	<jsp:include page="../header.jsp" />
+		
 		<style>
 			.error_field {
 				color: red;
 			}
 		</style>
 
-<title>Inserisci Nuovo Elemento</title>
+			<title>Inserisci Nuovo Elemento</title>
 	 </head>
 	   <body class="d-flex flex-column h-100">
 	   

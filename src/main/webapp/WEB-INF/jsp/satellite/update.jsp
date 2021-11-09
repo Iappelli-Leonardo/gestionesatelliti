@@ -9,6 +9,12 @@
 	 	<!-- Common imports in pages -->
 	 	<jsp:include page="../header.jsp" />
 	   
+	   	<style>
+			.error_field {
+				color: red;
+			}
+		</style>
+	   
 	   <title>Modifica elemento</title>
 	 </head>
 	   <body class="d-flex flex-column h-100">
@@ -26,7 +32,7 @@
 						<div class="alert alert-danger " role="alert">
 							Attenzione!! Sono presenti errori di validazione
 						</div>
-				</spring:hasBindErrors>
+					</spring:hasBindErrors>
 			  
 			  		<div class="alert alert-danger alert-dismissible fade show ${errorMessage==null?'d-none':'' }" role="alert">
 					  ${errorMessage}
@@ -47,7 +53,7 @@
 				    </div>
 				    <div class='card-body'>
 		
-							<form:form modelAttribute="update_satellite_attr" method="post" action="${pageContext.request.contextPath}/satellite/update" class="row g-3" novalidate="novalidate">
+								<form:form modelAttribute="update_satellite_attr" method="post" action="${pageContext.request.contextPath}/satellite/update" class="row g-3" novalidate="novalidate">
 							
 							<input type="hidden" name="id" value='${update_satellite_attr.id}'>
 								<div class="col-md-6">
