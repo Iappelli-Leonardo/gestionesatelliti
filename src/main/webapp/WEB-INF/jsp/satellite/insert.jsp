@@ -86,7 +86,7 @@
 								
 								<fmt:formatDate pattern='yyyy-MM-dd' var="parsedDate" type='date' value='${insert_satellite_attr.dataRientro}' />
 								<div class="col-md-3">
-									<label for="dataRientro" class="form-label">Data del rientro <span class="text-danger">*</span></label>
+									<label for="dataRientro" class="form-label">Data del rientro <span class="text-danger"></span></label>
                         			<spring:bind path="dataRientro">
 	                        		<input class="form-control ${status.error ? 'is-invalid' : ''}" id="dataRientro" type="date" placeholder="dd/MM/yy"
 	                            		title="formato : gg/mm/aaaa"  name="dataRientro" required 

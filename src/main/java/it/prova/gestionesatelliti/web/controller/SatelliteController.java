@@ -98,10 +98,10 @@ public class SatelliteController {
 	
 	@GetMapping("/update/{idSatellite}")
 	public String update(@PathVariable(required = true) Long idSatellite, Model model, RedirectAttributes redirectAttrs) {
-		
+		System.out.println("ciaooooooooooooooooooooooooooooooooooooooo");
 	 Satellite satellite = satelliteService.caricaSingoloElemento(idSatellite);
 	 
-	 satelliteService.rimuovi(satellite);
+	 satelliteService.aggiorna(satellite);
 		
 		redirectAttrs.addFlashAttribute("successMessage", "Operazione eseguita correttamente");
 		return "redirect:/satellite";

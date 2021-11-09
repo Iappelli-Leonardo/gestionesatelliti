@@ -28,32 +28,32 @@
 					    <div class='card-body'>
 					    	<dl class="row">
 							  <dt class="col-sm-3 text-right">Id:</dt>
-							  <dd class="col-sm-9">${show_impiegato_attr.id}</dd>
+							  <dd class="col-sm-9">${show_satellite_attr.id}</dd>
 					    	</dl>
 					    	
 					    	<dl class="row">
-							  <dt class="col-sm-3 text-right">Nome:</dt>
-							  <dd class="col-sm-9">${show_impiegato_attr.nome}</dd>
+							  <dt class="col-sm-3 text-right">Denominazione:</dt>
+							  <dd class="col-sm-9">${show_satellite_attr.denominazione}</dd>
 					    	</dl>
 					    	
 					    	<dl class="row">
-							  <dt class="col-sm-3 text-right">Cognome:</dt>
-							  <dd class="col-sm-9">${show_impiegato_attr.cognome}</dd>
+							  <dt class="col-sm-3 text-right">Codice:</dt>
+							  <dd class="col-sm-9">${show_satellite_attr.codice}</dd>
 					    	</dl>
 					    	
 					    	<dl class="row">
-							  <dt class="col-sm-3 text-right">Matricola:</dt>
-							  <dd class="col-sm-9">${show_impiegato_attr.matricola}</dd>
+							  <dt class="col-sm-3 text-right">Data del lancio:</dt>
+							  <dd class="col-sm-9"><fmt:formatDate type="date" value = "${show_satellite_attr.dataLancio}" /></dd>
 					    	</dl>
 					    	
 					    	<dl class="row">
-							  <dt class="col-sm-3 text-right">Data di Nascita:</dt>
-							  <dd class="col-sm-9"><fmt:formatDate type="date" value = "${show_impiegato_attr.dataDiNascita}" /></dd>
+							  <dt class="col-sm-3 text-right">Data del rientro:</dt>
+							  <dd class="col-sm-9"><fmt:formatDate type="date" value = "${show_satellite_attr.dataRientro}" /></dd>
 					    	</dl>
 					    	
 					    	<dl class="row">
 							  <dt class="col-sm-3 text-right">Stato :</dt>
-							  <dd class="col-sm-9">${show_impiegato_attr.stato}</dd>
+							  <dd class="col-sm-9">${show_satellite_attr.stato}</dd>
 					    	</dl>
 					    	
 					    	
@@ -61,7 +61,7 @@
 					    <!-- end card body -->
 					    
 					    <div class='card-footer'>
-					        <a href="${pageContext.request.contextPath}/impiegato" class='btn btn-outline-secondary' style='width:80px'>
+					        <a href="${pageContext.request.contextPath}/satellite" class='btn btn-outline-secondary' style='width:80px'>
 					            <i class='fa fa-chevron-left'></i> Back
 					        </a>
 					    </div>

@@ -66,7 +66,7 @@ public class SatelliteServiceImpl implements SatelliteService{
 
 		if (StringUtils.isNotEmpty(example.getCodice())) {
 			whereClauses.add(" s.codice  like :codice ");
-			paramaterMap.put("nome", "%" + example.getCodice() + "%");
+			paramaterMap.put("codice", "%" + example.getCodice() + "%");
 		}
 		if (StringUtils.isNotEmpty(example.getDenominazione())) {
 			whereClauses.add(" s.denominazione like :denominazione ");
@@ -75,6 +75,10 @@ public class SatelliteServiceImpl implements SatelliteService{
 		if (example.getDataLancio() != null) {
 			whereClauses.add("s.dataLancio >= :dataLancio ");
 			paramaterMap.put("dataLancio", example.getDataLancio());
+		}
+		if (example.getDataLancio() != null) {
+			whereClauses.add("s.dataRientro >= :dataRientro ");
+			paramaterMap.put("dataRientro", example.getDataLancio());
 		}
 	
 		if (example.getStato() != null) {
