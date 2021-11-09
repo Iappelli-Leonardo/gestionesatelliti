@@ -1,6 +1,7 @@
 package it.prova.gestionesatelliti.service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import it.prova.gestionesatelliti.model.Satellite;
+import it.prova.gestionesatelliti.model.Stato;
 import it.prova.gestionesatelliti.repository.SatelliteRepository;
 
 @Service
@@ -95,6 +97,14 @@ public class SatelliteServiceImpl implements SatelliteService{
 		}
 
 		return typedQuery.getResultList();
+	}
+	
+	@Transactional(readOnly = true)
+	public List<Satellite> findAllAnnniDisattivati() {
+		Date date = new Date();
+		date.setYear(date.getYear()-2);
+		System.out.println(date);
+		return satelliteRepository.findAllByDataLancioLessThanAndStatoNot(date, Stato.DISATTIVATO);
 	}
 
 }

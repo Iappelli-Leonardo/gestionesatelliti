@@ -110,4 +110,11 @@ public class SatelliteController {
 
 	}
 	
+	@GetMapping("/findallyears")
+	public String ricercaDueAnni(Model model) {
+		List<Satellite> satelliti = satelliteService.findAllAnnniDisattivati();
+		model.addAttribute("satellite_list_attribute", satelliti);
+		return "satellite/list";
+	}
+	
 }

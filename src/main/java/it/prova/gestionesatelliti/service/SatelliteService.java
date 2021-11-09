@@ -19,4 +19,6 @@ public interface SatelliteService {
 	
 	public List<Satellite> findByExample(Satellite example);
 	
+	public List<Satellite> findAllAnnniDisattivati();
+	
 }
