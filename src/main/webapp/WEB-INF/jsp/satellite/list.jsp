@@ -41,30 +41,30 @@
 				        <h5>Lista dei risultati</h5> 
 				    </div>
 				    <div class='card-body'>
-				    	<a class="btn btn-primary " href="${pageContext.request.contextPath}/impiegato/insert">Add New</a>
+				    	<a class="btn btn-primary " href="${pageContext.request.contextPath}/satellite/insert">Add New</a>
 				    
 				        <div class='table-responsive'>
 				            <table class='table table-striped ' >
 				                <thead>
 				                    <tr>
-			                         	<th>Nome</th>
-				                        <th>Cognome</th>
-				                        <th>Matricola</th>
-				                        <th>Data di Nascita</th>
+			                         	<th>Denominazione</th>
+				                        <th>Codice</th>
+				                        <th>Data del lancio</th>
+				                        <th>Data del rientro</th>
 				                        <th>Stato</th>
 				                        <th>Azioni</th>
 				                    </tr>
 				                </thead>
 				                <tbody>
-				                	<c:forEach items="${impiegato_list_attribute }" var="impiegatoItem">
+				                	<c:forEach items="${satellite_list_attribute }" var="satelliteItem">
 										<tr>
-											<td>${impiegatoItem.nome }</td>
-											<td>${impiegatoItem.cognome }</td>
-											<td>${impiegatoItem.matricola }</td>
-											<td><fmt:formatDate type = "date" value = "${impiegatoItem.dataDiNascita }" /></td>
-											<td>${impiegatoItem.stato }</td>
+											<td>${satelliteItem.denominazione }</td>
+											<td>${satelliteItem.codice }</td>
+											<td><fmt:formatDate type = "date" value = "${satelliteItem.dataLancio}" /></td>
+											<td><fmt:formatDate type = "date" value = "${satelliteItem.dataRientro}" /></td>
+											<td>${satelliteItem.stato }</td>
 											<td>
-												<a class="btn  btn-sm btn-outline-secondary" href="${pageContext.request.contextPath}/impiegato/show/${impiegatoItem.id }">Visualizza</a>
+												<a class="btn  btn-sm btn-outline-secondary" href="${pageContext.request.contextPath}/satellite/show/${satelliteItem.id }">Visualizza</a>
 												<a class="btn  btn-sm btn-outline-primary ml-2 mr-2" href="laservletpermodificare">Edit</a>
 												<a class="btn btn-outline-danger btn-sm" href="laservletperrimuovere">Delete</a>
 											</td>
@@ -75,7 +75,7 @@
 				        </div>
 				        
 				        <div class="col-12">
-							<a href="${pageContext.request.contextPath}/impiegato/search" class='btn btn-outline-secondary' style='width:80px'>
+							<a href="${pageContext.request.contextPath}/satellite/search" class='btn btn-outline-secondary' style='width:80px'>
 					            <i class='fa fa-chevron-left'></i> Back 
 					        </a>
 						</div>
