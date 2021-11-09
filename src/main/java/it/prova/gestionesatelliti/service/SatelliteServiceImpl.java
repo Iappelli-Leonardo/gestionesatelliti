@@ -107,4 +107,11 @@ public class SatelliteServiceImpl implements SatelliteService{
 		return satelliteRepository.findAllByDataLancioLessThanAndStatoNot(date, Stato.DISATTIVATO);
 	}
 
+	@Transactional(readOnly = true)
+	public List<Satellite> findDisattivatiNonRientrati() {
+		return satelliteRepository.findAllByStatoEqualsAndDataRientroEquals(Stato.DISATTIVATO, null);
+	}
+	
+	
+
 }

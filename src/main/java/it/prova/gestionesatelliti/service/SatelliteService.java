@@ -21,4 +21,6 @@ public interface SatelliteService {
 	
 	public List<Satellite> findAllAnnniDisattivati();
 	
+	public List<Satellite> findDisattivatiNonRientrati();
+	
 }

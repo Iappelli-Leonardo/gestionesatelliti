@@ -62,7 +62,10 @@
 						href="${pageContext.request.contextPath}/satellite/findallyears">GO TO</a>
 					</li>
 
-					<li>secondo elemento</li>
+					<li>Visualizza i satelliti disattivati ma non rientrati	
+					<a class="btn btn-outline-primary ml-2"
+						href="${pageContext.request.contextPath}/satellite/findalldisattivati">GO TO</a></li>
+						
 					<li>terzo elemento</li>
 				</ul>
 			</div>

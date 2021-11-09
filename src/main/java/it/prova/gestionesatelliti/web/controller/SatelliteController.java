@@ -98,10 +98,10 @@ public class SatelliteController {
 
 	@PostMapping("/update")
 	public String saveupdate(@Valid @ModelAttribute("update_satellite_attr") Satellite satellite,
-			RedirectAttributes redirectAttrs, BindingResult result) {
+			 Model model, RedirectAttributes redirectAttrs, BindingResult result) {
 
 		if (result.hasErrors())
-			return "satellite/modifica";
+			return "satellite/update";
 
 		satelliteService.aggiorna(satellite);
 
@@ -113,6 +113,13 @@ public class SatelliteController {
 	@GetMapping("/findallyears")
 	public String ricercaDueAnni(Model model) {
 		List<Satellite> satelliti = satelliteService.findAllAnnniDisattivati();
+		model.addAttribute("satellite_list_attribute", satelliti);
+		return "satellite/list";
+	}
+	
+	@GetMapping("/findalldisattivati")
+	public String ricercaDisattivati(Model model) {
+		List<Satellite> satelliti = satelliteService.findDisattivatiNonRientrati();
 		model.addAttribute("satellite_list_attribute", satelliti);
 		return "satellite/list";
 	}
