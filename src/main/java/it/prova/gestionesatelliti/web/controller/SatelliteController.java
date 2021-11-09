@@ -123,5 +123,11 @@ public class SatelliteController {
 		model.addAttribute("satellite_list_attribute", satelliti);
 		return "satellite/list";
 	}
-	
+
+	@GetMapping("/findall10anni")
+	public String RicercaDieciAnniEFissi(Model model) {
+		List<Satellite> satelliti = satelliteService.findPiuDiDieciAnniFissi();
+		model.addAttribute("satellite_list_attribute", satelliti);
+		return "satellite/list";
+	}
 }

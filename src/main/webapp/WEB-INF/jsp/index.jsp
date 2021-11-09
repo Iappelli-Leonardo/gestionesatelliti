@@ -52,7 +52,7 @@
 				      <div class="container-fluid py-5">
 				        <h1 class="display-5 fw-bold">Benvenuto alla Gestione di satelliti</h1>
 				        <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. </p>
-				        <a class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/impiegato/search">Vai a Ricerca</a>
+				        <a class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/satellite/search">Vai a Ricerca</a>
 				      </div>
 			    </div>
 			    <div>
@@ -63,10 +63,14 @@
 					</li>
 
 					<li>Visualizza i satelliti disattivati ma non rientrati	
-					<a class="btn btn-outline-primary ml-2"
-						href="${pageContext.request.contextPath}/satellite/findalldisattivati">GO TO</a></li>
+						<a class="btn btn-outline-primary ml-2"
+						href="${pageContext.request.contextPath}/satellite/findalldisattivati">GO TO</a>
+					</li>
 						
-					<li>terzo elemento</li>
+						<li>Visualizza i satelliti da 10 anni in orbita ma ancora fissi
+							<a class="btn btn-outline-primary ml-2"
+						href="${pageContext.request.contextPath}/satellite/findall10anni">GO TO</a>
+					</li>
 				</ul>
 			</div>
 			    

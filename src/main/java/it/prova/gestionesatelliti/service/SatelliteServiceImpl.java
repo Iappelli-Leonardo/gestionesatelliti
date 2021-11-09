@@ -113,5 +113,13 @@ public class SatelliteServiceImpl implements SatelliteService{
 	}
 	
 	
+	@Transactional(readOnly = true)
+	public List<Satellite> findPiuDiDieciAnniFissi() {
+		Date date = new Date();
+		date.setYear(date.getYear()-10);
+		System.out.println(date);
+		return satelliteRepository.findAllByDataLancioLessThanAndStatoEquals(date, Stato.FISSO);
+	}
+
 
 }
